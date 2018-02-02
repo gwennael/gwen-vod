@@ -9,10 +9,10 @@ let date = new Date();
 
 // Définition des URLs pour les différents filtres
 let filter_URL = {
-    0 : `${API_TMDb_DISCOVER_URL}&release_date.lte=${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}&sort_by=release_date.desc&region=fr`,
-    1: `${API_TMDb_DISCOVER_URL}&sort_by=popularity.desc&region=fr`,
-    2: `${API_TMDb_DISCOVER_URL}&primary_release_date.gte=${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}&sort_by=primary_release_date.asc&region=fr`,
-    3: `${API_TMDb_DISCOVER_URL}&primary_release_year=1995&sort_by=popularity.desc&region=fr`
+    0 : `${API_TMDb_DISCOVER_URL}&release_date.lte=${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}&sort_by=release_date.desc&region=fr&language=fr-FR&with_release_type=2|3`,
+    1: `${API_TMDb_DISCOVER_URL}&sort_by=popularity.desc&region=fr&language=fr-FR&with_release_type=2|3`,
+    2: `${API_TMDb_DISCOVER_URL}&release_date.gte=${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}&region=fr&language=fr-FR&with_release_type=2|3`,
+    3: `${API_TMDb_DISCOVER_URL}&primary_release_year=1995&sort_by=popularity.desc&region=fr&language=fr-FR&with_release_type=2|3`
 };
 
 // Obtention des films en fonction du choix du filtre
