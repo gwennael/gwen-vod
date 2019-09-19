@@ -16,11 +16,14 @@ module.exports = {
         port: 8003,
         disableHostCheck: true
     },
-    module: {
-        loaders: [
+	module: {
+        rules: [
             {
                 test: /\.html$/,
-                loader: 'file-loader?name=[name].[ext]',
+                loader: 'file-loader',
+				options: {
+					name: '[name].[ext]',
+				},
             },
             {
                 test: /\.jsx?$/,
